@@ -11,12 +11,18 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Multimedia
+        MultimediaWidgets
         REQUIRED)
 
-add_executable(q_player main.cpp)
+add_executable(q_player main.cpp
+        MainWindow.cc
+        MainWindow.hh)
 target_link_libraries(q_player
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Multimedia
+        Qt::MultimediaWidgets
 )
 
